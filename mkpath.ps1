@@ -1,0 +1,1 @@
+New-Item -Path "c:\dev\batFiles" -Name "$args.ps1" -Value "Set-Location $(Get-Location)"

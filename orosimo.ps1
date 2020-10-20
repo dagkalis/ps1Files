@@ -1,0 +1,1 @@
+Set-Location 'c:\dev\orosimo_db'
