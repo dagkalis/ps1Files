@@ -22,7 +22,7 @@ if ($branch -eq "master") {
 		$confirmation = Read-Host "push? [y/n]"
 	}
 	git push origin $branch
-	start 'gitlab.com'
+	start 'https:\\gitlab.com'
 	 
 } else {
 	echo "no commit comment"
