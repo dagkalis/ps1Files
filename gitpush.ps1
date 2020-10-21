@@ -26,6 +26,7 @@ if ($branch -eq "master") {
 	$url = getUrl($pushText)
 	echo $url
 	start $url
+	#comment
 	 
 } else {
 	echo "no commit comment"
