@@ -21,14 +21,8 @@ if ($branch -eq "master") {
 		if ($confirmation -eq 'n') {exit}
 		$confirmation = Read-Host "push? [y/n]"
 	}
-	$pushText = (git push origin linkFunctionality 2>&1)
-	echo $pushText
-	$url = getUrl($pushText)
-	echo $url
-	start $url
-	#comment
-	#vcomment
-	#vcomment
+	git push origin $branch
+	start 'gitlab.com'
 	 
 } else {
 	echo "no commit comment"
