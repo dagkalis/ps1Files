@@ -22,7 +22,8 @@ if ($branch -eq "master") {
 		$confirmation = Read-Host "push? [y/n]"
 	}
 	$pushText = (git push origin $branch) | Out-String
-	start getUrl($pushText)
+	$url = getUrl($pushText)
+	start $url
 	 
 } else {
 	echo "no commit comment"
