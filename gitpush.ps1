@@ -22,6 +22,7 @@ if ($branch -eq "master") {
 		$confirmation = Read-Host "push? [y/n]"
 	}
 	$pushText = (git push origin $branch) | Out-String
+	echo $pushText
 	$url = getUrl($pushText)
 	echo $url
 	start $url
