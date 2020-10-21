@@ -22,6 +22,13 @@ if ($branch -eq "master") {
 		$confirmation = Read-Host "push? [y/n]"
 	}
 	git push origin $branch
+	
+	$confirmation = Read-Host "`n`nmerge? [y/n]"
+	while($confirmation -ne "y")
+	{
+		if ($confirmation -eq 'n') {exit}
+		$confirmation = Read-Host "merge? [y/n]"
+	}
 	$folder = ((Get-Location) | Get-Item).Name
 	start "https://gitlab.com/orosimo/$folder"	 
 } else {
