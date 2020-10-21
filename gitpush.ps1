@@ -22,7 +22,7 @@ if ($branch -eq "master") {
 		$confirmation = Read-Host "push? [y/n]"
 	}
 	git push origin $branch
-	$directory = $(Get-Location).Name;  // System32
+	$directory = $(Get-Location).Name;  
 	start "https:\\gitlab.com\orosimo\$directory"
 	 
 } else {
