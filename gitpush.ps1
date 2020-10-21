@@ -28,6 +28,7 @@ if ($branch -eq "master") {
 	start $url
 	#comment
 	#vcomment
+	#vcomment
 	 
 } else {
 	echo "no commit comment"
