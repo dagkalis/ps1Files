@@ -23,6 +23,7 @@ if ($branch -eq "master") {
 	}
 	$pushText = (git push origin $branch) | Out-String
 	$url = getUrl($pushText)
+	echo $url
 	start $url
 	 
 } else {
