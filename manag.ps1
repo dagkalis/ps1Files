@@ -1,5 +1,5 @@
+$host.ui.RawUI.WindowTitle = "Kri-Kri Management"
 Set-Location C:\dev\krikri-yard-management
-echo management
 if($args -eq "r"){
 	rails s
 }
