@@ -14,13 +14,16 @@ if ($branch -eq "master") {
 	}
 	git add .
 	git commit -m "$args"
+	
 	$confirmation = Read-Host "`n`npush? [y/n]"
 	while($confirmation -ne "y")
 	{
 		if ($confirmation -eq 'n') {exit}
 		$confirmation = Read-Host "push? [y/n]"
 	}
-	git push origin $branch 
+	$pushText = (git push origin $branch) | Out-String
+	start getUrl($pushText)
+	 
 } else {
 	echo "no commit comment"
 }
