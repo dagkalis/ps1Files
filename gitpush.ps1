@@ -22,9 +22,8 @@ if ($branch -eq "master") {
 		$confirmation = Read-Host "push? [y/n]"
 	}
 	git push origin $branch
-	
-	start "https:\\gitlab.com\orosimo\"((Get-Location) | Get-Item).Name
-	 
+	$folder = ((Get-Location) | Get-Item).Name
+	start "https://gitlab.com/orosimo/$folder"	 
 } else {
 	echo "no commit comment"
 }
