@@ -21,7 +21,7 @@ if ($branch -eq "master") {
 		if ($confirmation -eq 'n') {exit}
 		$confirmation = Read-Host "push? [y/n]"
 	}
-	$pushText = (git push origin $branch) | Out-String
+	$pushText = (git push origin linkFunctionality 2>&1)
 	echo $pushText
 	$url = getUrl($pushText)
 	echo $url
