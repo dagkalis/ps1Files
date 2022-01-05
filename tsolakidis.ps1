@@ -1,1 +1,1 @@
-Set-Location C:\dev\tsolakidis_api
+Set-Location C:\dev\temp\tsolakidis_api
