@@ -1,0 +1,1 @@
+Set-Location C:\dev\orosimo-wms-api

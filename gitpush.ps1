@@ -2,9 +2,8 @@ $branch= &git rev-parse --abbrev-ref HEAD
 if ($branch -eq "master") {
         echo "you are on master"
 } elseif ($null -ne $args[0]){
-        echo "branches:"
-        git branch
-        echo "`n`nCommit message: `n$args`n`n"
+        echo "`ncurrent branch: $branch"
+        echo "`nCommit message: `n$args`n`n"
 
         $confirmation = Read-Host "commit? [y/n]"
         while($confirmation -ne "y")
@@ -29,8 +28,13 @@ if ($branch -eq "master") {
                 if ($confirmation -eq 'n') {exit}
                 $confirmation = Read-Host "merge? [y/n]"
         }
-        $folder = ((Get-Location) | Get-Item).Name
-        start "https://gitlab.com/orosimo/$folder"
+        $remote_url = git config --get remote.origin.url
+        if($remote_url -Match "gitlab.com"){
+            $end = $remote_url.split(":")[-1] -replace ".git", ""
+            start "https://gitlab.com/$end"
+        }else{
+            start $remote_url
+        }
 } else {
         echo "no commit comment"
 }
