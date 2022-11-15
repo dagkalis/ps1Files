@@ -1,0 +1,1 @@
+Set-Location C:\Users\gd\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs

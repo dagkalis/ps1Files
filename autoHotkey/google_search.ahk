@@ -10,7 +10,7 @@ ClipWait
 clipb = %clipboard% ; get clipboardText
 clipbb := clipb ; clipboard to the new kind of variable
 com := "facebook.com"
-If clipbb contains .com,.gr,.org,.gov
+If clipbb contains .com,.gr,.org,.gov,192.168.
 {
     Run, C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe %clipb%
     return
